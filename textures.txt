@@ -1,0 +1,115 @@
+//caco plush
+sprite CCPLA0, 21, 19{
+  offset 10, 19
+  patch CCPLA0, 0, 0{}
+}
+
+//trans caco plush
+sprite TCPLA0, 21, 19{
+  offset 10, 19
+  patch TCPLA0, 0, 0{}
+}
+
+//ukraine caco plush
+sprite UCPLA0, 21, 19{
+  offset 10, 19
+  patch UCPLA0, 0, 0{}
+}
+
+//two-eyed caco plush
+sprite C2PLA0, 21, 19{
+  offset 10, 19
+  patch C2PLA0, 0, 0{}
+}
+
+//caco plush weapon sprite
+sprite CCPFA0, 21, 19{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch CCPLA0, 0, 0{}
+}
+
+//caco plush squish
+sprite CCPFB0, 21, 19{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch CCPLA0, 0, 0{}
+}
+
+sprite CCPFC0, 21, 19{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch CCPLA0, 0, 0{}
+}
+
+//trans caco plush weapon sprite
+sprite TCPFA0, 21, 19{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch TCPLA0, 0, 0{}
+}
+
+//trans caco plush squish
+sprite TCPFB0, 21, 19{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch TCPLA0, 0, 0{}
+}
+
+sprite TCPFC0, 21, 19{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch TCPLA0, 0, 0{}
+}
+
+//ukraine caco plush weapon sprite
+sprite UCPFA0, 21, 19{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch UCPLA0, 0, 0{}
+}
+
+//ukraine caco plush squish
+sprite UCPFB0, 21, 19{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch UCPLA0, 0, 0{}
+}
+
+sprite UCPFC0, 21, 19{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch UCPLA0, 0, 0{}
+}
+
+//twoeyed caco plush weapon sprite
+sprite C2PFA0, 21, 19{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch C2PLA0, 0, 0{}
+}
+
+//twoeyed caco plush squish
+sprite C2PFB0, 21, 19{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch C2PLA0, 0, 0{}
+}
+
+sprite C2PFC0, 21, 19{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch C2PLA0, 0, 0{}
+}
