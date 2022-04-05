@@ -25,7 +25,7 @@ override double weaponbulk(){
 override string gethelptext(){
 		return
 		WEPHELP_FIRE.."  Squeeze plushie\n"
-  ..WEPHELP_ALTRELOAD.."Throw\n";
+  ..WEPHELP_ALTRELOAD.."  Throw\n";
 	}
 
 //these functions MUST be added to new HDWeapons
