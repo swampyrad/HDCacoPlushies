@@ -3,7 +3,7 @@ A set of collectible cacodemon plush dolls for Hideous Destructor
 
 Loadout codes:
 
-- ccp - Cacodemon Plushie
+- cdp - Cacodemon Plushie
 
 - tcp - Trans Cacodemon Plushie
 
