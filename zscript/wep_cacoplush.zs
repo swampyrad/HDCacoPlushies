@@ -11,7 +11,7 @@ class CacoPlushDoll:HDWeapon{
   bouncefactor 2.;
 		scale 1;
 		tag "Cacodemon Plushie";
-		hdweapon.refid "ccp";
+		hdweapon.refid "cdp";
 	}
 
 override string,double getpickupsprite(bool usespare){
