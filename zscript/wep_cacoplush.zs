@@ -60,8 +60,15 @@ override void GunBounce(){
 		}
 
 		A_StartSound("plush/squeak",CHAN_BODY,CHANF_OVERLAP,min(0.7,dmg*0.02));
+  A_AlertMonsters(1);
 		setstatelabel("spawn");
 	}
+
+action void A_CacoTaunt(){
+  A_StartSound("plush/squeak",9);
+  let ccp=new("DelayedTaunter");
+		ccp.target=invoker;
+		ccp.timer=18;}
 
 	states{
 	select0:
@@ -91,7 +98,8 @@ override void GunBounce(){
 		goto readyend;
 
   fire:
-   CCPF A 0 A_StartSound("plush/squeak",9);
+   CCPF A 0 A_CacoTaunt();
+
 		CCPF ABCCBA 2;
   goto nope;
 
