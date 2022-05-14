@@ -4,6 +4,7 @@
 class CacoPlushDoll:HDWeapon{
 	default{
 		-hdweapon.droptranslation
+               +hdweapon.fitsinbackpack
    weapon.slotnumber 7;
 		weapon.slotpriority 9;
 		inventory.pickupmessage "Picked up a cacodemon plushie.";
