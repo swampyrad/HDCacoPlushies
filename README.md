@@ -5,7 +5,11 @@ Loadout codes:
 
 - cdp - Cacodemon Plushie
 
-- tcp - Trans Cacodemon Plushie
+- gcp - Gay Pride Cacodemon Plushie
+
+- bcp - Bisexual Pride Cacodemon Plushie
+
+- tcp - Trans Pride Cacodemon Plushie
 
 - ucp - Ukraine Cacodemon Plushie
 
