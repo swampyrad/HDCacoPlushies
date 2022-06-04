@@ -13,3 +13,13 @@ version "4.6"
 #include "zscript/wep_gay_cacoplush.zs"
 
 #include "zscript/wep_lesbian_cacoplush.zs"
+
+#include "zscript/wep_asexual_cacoplush.zs"
+
+#include "zscript/wep_aromantic_cacoplush.zs"
+
+#include "zscript/wep_agender_cacoplush.zs"
+
+#include "zscript/wep_nonbinary_cacoplush.zs"
+
+#include "zscript/wep_pansexual_cacoplush.zs"
