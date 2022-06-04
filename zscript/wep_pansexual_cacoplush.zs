@@ -1,21 +1,21 @@
 //-------------------------------------------------
 // *squeako*
 //-------------------------------------------------
-class TransPrideCacoPlushDoll:CacoPlushDoll{
+class PanPrideCacoPlushDoll:CacoPlushDoll{
 	default{
-		inventory.pickupmessage "Picked up a trans pridr cacodemon plushie. Trans Rights!";
-		inventory.icon "TCPLA0";
-		tag "Trans Pride Cacodemon Plushie";
-		hdweapon.refid "tcp";
+		inventory.pickupmessage "Picked up a pansexual pride cacodemon plushie.";
+		inventory.icon "PSPLA0";
+		tag "Pansexual Pride Cacodemon Plushie";
+		hdweapon.refid "PSP";
 	}
 
 override string,double getpickupsprite(bool usespare){
-		return "TCPLA0",1.;
+		return "PSPLA0",1.;
 	}
 
 	states{
 	select0:
-		TCPF A 0{
+		PSPF A 0{
 			A_TakeInventory("NulledWeapon");
 			
 		}
@@ -28,7 +28,7 @@ override string,double getpickupsprite(bool usespare){
 		wait;
 
 	deselect0:
-		TCPF A 0;
+		PSPF A 0;
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
@@ -36,21 +36,21 @@ override string,double getpickupsprite(bool usespare){
 		wait;
 
 	ready:
-		TCPF A 0;
+		PSPF A 0;
 		#### A 1 A_WeaponReady(WRF_ALL);
 		goto readyend;
 
   fire:
-   TCPF A 0 A_CacoTaunt();
+   PSPF A 0 A_CacoTaunt();
 
-		TCPF BCCBA 2;
+		PSPF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
 //specifically the PS-451 single-use plasma gun
 altreload:
   YEET:
-  TCPF A 1;
+  PSPF A 1;
 		---- A 1
 		{
 		if(player&&hdweapon(player.readyweapon)){
@@ -62,7 +62,7 @@ altreload:
   goto nope;
 
 	spawn:
-		TCPL A -1;
+		PSPL A -1;
 		stop;
 	
 	}
