@@ -13,6 +13,16 @@ Loadout codes:
 
 - tcp - Trans Pride Cacodemon Plushie
 
+- asp - Asexual Pride Cacodemon Plushie
+
+- arp - Aromantic Pride Cacodemon Plushie
+
+- agp - Agender Pride Cacodemon Plushie
+
+- nbp - Nonbinary Pride Cacodemon Plushie
+
+- psp - Pansexual Pride Cacodemon Plushie
+
 - ucp - Ukraine Cacodemon Plushie
 
 - c2p - Two-eyed Cacodemon Plushie
