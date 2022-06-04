@@ -28,11 +28,16 @@ sprite BCPLA0, 21, 20{
   patch BCPLA0, 0, 0{}
 }
 
-
 //gay pride caco plush
 sprite GCPLA0, 21, 20{
   offset 10, 20
   patch GCPLA0, 0, 0{}
+}
+
+//lesbian pride caco plush
+sprite LCPLA0, 21, 20{
+  offset 10, 20
+  patch LCPLA0, 0, 0{}
 }
 
 
@@ -173,4 +178,27 @@ sprite GCPFC0, 21, 20{
   yscale 0.40
   offset -50,-45
   patch GCPLA0, 0, 0{}
+}
+
+//lesbian caco plush weapon sprite
+sprite LCPFA0, 21, 20{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch LCPLA0, 0, 0{}
+}
+
+//lesbian caco plush squish
+sprite LCPFB0, 21, 20{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch LCPLA0, 0, 0{}
+}
+
+sprite LCPFC0, 21, 20{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch LCPLA0, 0, 0{}
 }

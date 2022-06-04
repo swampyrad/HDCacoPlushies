@@ -11,3 +11,5 @@ version "4.6"
 #include "zscript/wep_bi_cacoplush.zs"
 
 #include "zscript/wep_gay_cacoplush.zs"
+
+#include "zscript/wep_lesbian_cacoplush.zs"
