@@ -1,16 +1,10 @@
 //-------------------------------------------------
 // *squeako*
 //-------------------------------------------------
-class BisexualCacoPlushDoll:HDWeapon{
+class BisexualCacoPlushDoll:CacoPlushDoll{
 	default{
-		-hdweapon.droptranslation
-               +hdweapon.fitsinbackpack
-   weapon.slotnumber 7;
-		weapon.slotpriority 9;
 		inventory.pickupmessage "Picked up a bisexual pride cacodemon plushie. Bicon!";
 		inventory.icon "BCPLA0";
-  bouncefactor 2.;
-		scale 1;
 		tag "Bi Pride Cacodemon Plushie";
 		hdweapon.refid "bcp";
 	}
@@ -18,58 +12,6 @@ class BisexualCacoPlushDoll:HDWeapon{
 override string,double getpickupsprite(bool usespare){
 		return "BCPLA0",1.;
 	}
-
-override double weaponbulk(){
-		return 20;
-	}
-
-override string gethelptext(){
-		return
-		WEPHELP_FIRE.."  Squeeze plushie\n"
-  ..WEPHELP_ALTRELOAD.."  Throw\n";
-	}
-
-//these functions MUST be added to new HDWeapons
-//to support proper weapon stacking
-override bool AddSpareWeapon(actor newowner){
-  return AddSpareWeaponRegular(newowner);
-  }
-override hdweapon GetSpareWeapon(actor newowner, bool reverse, bool doselect){
-  return GetSpareWeaponRegular(newowner,reverse,doselect);
-  }
-
-override void GunBounce(){
-		double wb=weaponbulk();
-		int dmg=int(throwvel*wb*wb*frandom(0.00001,0.0001));
-
-		if(tracer){
-			tracer.damagemobj(self,target,dmg,"Bashing");
-			if(hd_debug)A_Log(tracer.getclassname().." hit for "..dmg.." damage with thrown "..getclassname());
-		}
-
-		vel*=frandom(0.7,0.8);
-		if(
-			abs(vel.x)<5
-			&&abs(vel.y)<5
-			&&abs(vel.z)<5
-		){
-			bmissile=false;
-			bBOUNCEONWALLS=false;
-			bBOUNCEONFLOORS=false;
-			bALLOWBOUNCEONACTORS=false;
-			bBOUNCEAUTOOFF=false;
-		}
-
-		A_StartSound("plush/squeak",CHAN_BODY,CHANF_OVERLAP,min(0.7,dmg*0.02));
-  A_AlertMonsters(1);
-		setstatelabel("spawn");
-	}
-
-action void A_CacoTaunt(){
-  A_StartSound("plush/squeak",9);
-  let ccp=new("DelayedTaunter");
-		ccp.target=invoker;
-		ccp.timer=18;}
 
 	states{
 	select0:
@@ -101,7 +43,7 @@ action void A_CacoTaunt(){
   fire:
    BCPF A 0 A_CacoTaunt();
 
-		BCPF ABCCBA 2;
+		BCPF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,

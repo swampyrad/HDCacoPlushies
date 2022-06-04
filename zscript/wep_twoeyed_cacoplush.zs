@@ -3,13 +3,8 @@
 //-------------------------------------------------
 class TwoEyedCacoPlushDoll:CacoPlushDoll{
 	default{
-		-hdweapon.droptranslation
-   weapon.slotnumber 7;
-		weapon.slotpriority 9;
 		inventory.pickupmessage "Picked up a cacodemon plushie. It has two eyes...";
 		inventory.icon "C2PLA0";
-  bouncefactor 2.;
-		scale 1;
 		tag "Two-eyed Cacodemon Plushie";
 		hdweapon.refid "C2P";
 	}
@@ -17,7 +12,6 @@ class TwoEyedCacoPlushDoll:CacoPlushDoll{
 override string,double getpickupsprite(bool usespare){
 		return "C2PLA0",1.;
 	}
-
 
 	states{
 	select0:
@@ -47,8 +41,9 @@ override string,double getpickupsprite(bool usespare){
 		goto readyend;
 
   fire:
-   C2PF A 0 A_StartSound("plush/squeak",9);
-		C2PF ABCCBA 2 A_AlertMonsters(1);
+   C2PF A 0 A_CacoTaunt();
+
+		C2PF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,

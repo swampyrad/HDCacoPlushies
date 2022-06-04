@@ -3,13 +3,8 @@
 //-------------------------------------------------
 class TransCacoPlushDoll:CacoPlushDoll{
 	default{
-		-hdweapon.droptranslation
-   weapon.slotnumber 7;
-		weapon.slotpriority 9;
 		inventory.pickupmessage "Picked up a cacodemon plushie. Trans Rights!";
 		inventory.icon "TCPLA0";
-  bouncefactor 2.;
-		scale 1;
 		tag "Trans Cacodemon Plushie";
 		hdweapon.refid "tcp";
 	}
@@ -46,8 +41,9 @@ override string,double getpickupsprite(bool usespare){
 		goto readyend;
 
   fire:
-   TCPF A 0 A_StartSound("plush/squeak",9);
-		TCPF ABCCBA 2 A_AlertMonsters(1);
+   TCPF A 0 A_CacoTaunt();
+
+		TCPF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,

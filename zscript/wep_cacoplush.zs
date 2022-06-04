@@ -4,13 +4,14 @@
 class CacoPlushDoll:HDWeapon{
 	default{
 		-hdweapon.droptranslation
-               +hdweapon.fitsinbackpack
+   +hdweapon.fitsinbackpack
    weapon.slotnumber 7;
 		weapon.slotpriority 9;
+   inventory.pickupsound "plush/squeak";
 		inventory.pickupmessage "Picked up a cacodemon plushie.";
 		inventory.icon "CCPLA0";
-  bouncefactor 2.;
-		scale 1;
+   bouncefactor 2.;
+		scale 0.6;
 		tag "Cacodemon Plushie";
 		hdweapon.refid "cdp";
 	}
@@ -20,7 +21,7 @@ override string,double getpickupsprite(bool usespare){
 	}
 
 override double weaponbulk(){
-		return 20;
+		return 8;
 	}
 
 override string gethelptext(){
@@ -40,18 +41,18 @@ override hdweapon GetSpareWeapon(actor newowner, bool reverse, bool doselect){
 
 override void GunBounce(){
 		double wb=weaponbulk();
-		int dmg=int(throwvel*wb*wb*frandom(0.00001,0.0001));
+		int dmg=int(throwvel*wb*wb*frandom(0.0001,0.0003));
 
 		if(tracer){
 			tracer.damagemobj(self,target,dmg,"Bashing");
-			if(hd_debug)A_Log(tracer.getclassname().." hit for "..dmg.." damage with thrown "..getclassname());
+			if(hd_debug)A_Log(tracer.getclassname().." boinked for "..dmg.." damage with thrown "..getclassname());
 		}
 
 		vel*=frandom(0.7,0.8);
 		if(
-			abs(vel.x)<5
-			&&abs(vel.y)<5
-			&&abs(vel.z)<5
+			abs(vel.x)<3
+			&&abs(vel.y)<3
+			&&abs(vel.z)<3
 		){
 			bmissile=false;
 			bBOUNCEONWALLS=false;
@@ -61,7 +62,7 @@ override void GunBounce(){
 		}
 
 		A_StartSound("plush/squeak",CHAN_BODY,CHANF_OVERLAP,min(0.7,dmg*0.02));
-  A_AlertMonsters(1);
+   A_AlertMonsters(1);
 		setstatelabel("spawn");
 	}
 
@@ -101,7 +102,7 @@ action void A_CacoTaunt(){
   fire:
    CCPF A 0 A_CacoTaunt();
 
-		CCPF ABCCBA 2;
+		CCPF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,

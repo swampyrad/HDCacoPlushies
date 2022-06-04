@@ -3,13 +3,8 @@
 //-------------------------------------------------
 class UkraineCacoPlushDoll:CacoPlushDoll{
 	default{
-		-hdweapon.droptranslation
-   weapon.slotnumber 7;
-		weapon.slotpriority 9;
 		inventory.pickupmessage "Picked up a cacodemon plushie. Slava Ukraini!";
 		inventory.icon "UCPLA0";
-  bouncefactor 2.;
-		scale 1;
 		tag "Ukraine Cacodemon Plushie";
 		hdweapon.refid "UCP";
 	}
@@ -46,8 +41,9 @@ override string,double getpickupsprite(bool usespare){
 		goto readyend;
 
   fire:
-   UCPF A 0 A_StartSound("plush/squeak",9);
-		UCPF ABCCBA 2 A_AlertMonsters(1);
+   UCPF A 0 A_CacoTaunt();
+
+		UCPF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
