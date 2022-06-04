@@ -5,6 +5,8 @@ Loadout codes:
 
 - cdp - Cacodemon Plushie
 
+- lcp - Lesbian Pride Cacodemon Plushie
+
 - gcp - Gay Pride Cacodemon Plushie
 
 - bcp - Bisexual Pride Cacodemon Plushie
