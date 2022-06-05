@@ -23,3 +23,5 @@ version "4.6"
 #include "zscript/wep_nonbinary_cacoplush.zs"
 
 #include "zscript/wep_pansexual_cacoplush.zs"
+
+#include "zscript/wep_renegade_cacoplush.zs"

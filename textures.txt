@@ -1,4 +1,5 @@
-//All Cacodemon sprites created by Swampyrad
+//Cacodemon plush sprites created by Swampyrad
+//Renegade plush sprite edit by BenitezClance4
 
 //[  Pickup Sprites  ]
 
@@ -6,6 +7,12 @@
 sprite CCPLA0, 21, 20{
   offset 10, 20
   patch CCPLA0, 0, 0{}
+}
+
+//Renegade caco plush
+sprite RCPLA0, 21, 20{
+  offset 10, 20
+  patch RCPLA0, 0, 0{}
 }
 
 //trans pride caco plush
@@ -333,6 +340,27 @@ sprite AGPFC0, 21, 20{
   yscale 0.40
   offset -50,-45
   patch AGPLA0, 0, 0{}
+}
+
+//Renegade caco plush
+sprite RCPFA0, 21, 20{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch RCPLA0, 0, 0{}
+}
+//Renegade caco plush squish
+sprite RCPFB0, 21, 20{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch RCPLA0, 0, 0{}
+}
+sprite RCPFC0, 21, 20{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch RCPLA0, 0, 0{}
 }
 
 //end of file
