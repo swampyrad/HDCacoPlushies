@@ -87,6 +87,12 @@ sprite AGPLA0, 21, 20{
   patch AGPLA0, 0, 0{}
 }
 
+//felonious bolus plush
+sprite FBOLA0, 21, 20{
+  offset 10, 20
+  patch FBOLA0, 0, 0{}
+}
+
 //[  Weapon Sprites  ]
 
 //caco plush weapon sprite
@@ -361,6 +367,27 @@ sprite RCPFC0, 21, 20{
   yscale 0.40
   offset -50,-45
   patch RCPLA0, 0, 0{}
+}
+
+//felonius bolus weapon sprite
+sprite FBOFA0, 21, 20{
+  xscale 0.25 
+  yscale 0.25
+  offset -50,-25
+  patch FBOLA0, 0, 0{}
+}
+//felonious bolus squish
+sprite FBOFB0, 21, 20{
+  xscale 0.25
+  yscale 0.30
+  offset -50,-33
+  patch FBOLA0, 0, 0{}
+}
+sprite FBOFC0, 21, 20{
+  xscale 0.25
+  yscale 0.40
+  offset -50,-45
+  patch FBOLA0, 0, 0{}
 }
 
 //end of file

@@ -25,3 +25,5 @@ version "4.6"
 #include "zscript/wep_pansexual_cacoplush.zs"
 
 #include "zscript/wep_renegade_cacoplush.zs"
+
+#include "zscript/wep_felonious_bolus.zs"
