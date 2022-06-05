@@ -27,4 +27,5 @@ Loadout codes:
 
 - c2p - Two-eyed Cacodemon Plushie
 
+- rcp - Renegade (aka Clance) Cacodemon Plushie
 
