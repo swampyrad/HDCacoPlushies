@@ -29,3 +29,4 @@ Loadout codes:
 
 - rcp - Renegade (aka Clance) Cacodemon Plushie
 
+- fbo - Felonious Bolus
