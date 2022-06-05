@@ -1,48 +1,27 @@
 //-------------------------------------------------
-// *squeako*
+// "Habeus corpus, ya feel me?"
 //-------------------------------------------------
-class CacoPlushDoll:HDWeapon{
+
+//Felonious Bolus design by PilotRedSun
+
+class FeloniousBolus:CacoPlushDoll{
 	default{
-		-hdweapon.droptranslation
-   +hdweapon.fitsinbackpack
-    
-    +ALLOWBOUNCEONACTORS
-    +BOUNCEONACTORS
-    -BOUNCEAUTOOFF
-
-   weapon.slotnumber 7;
-		weapon.slotpriority 9;
-   inventory.pickupsound "plush/squeak";
-		inventory.pickupmessage "Picked up a cacodemon plushie.";
-		inventory.icon "CCPLA0";
-   bouncefactor 2.;
-		scale 0.6;
-		tag "Cacodemon Plushie";
-		hdweapon.refid "cdp";
-	}
-
-override string,double getpickupsprite(bool usespare){
-		return "CCPLA0",1.;
+		inventory.pickupmessage "Picked up a strange bolus. It has a felonious appearance...";
+   scale 1;
+   bouncefactor 4;
+   inventory.pickupsound "felonious/bolus";
+		inventory.icon "FBOLA0";
+		tag "Felonious Bolus";
+		hdweapon.refid "FBO";
 	}
 
 override double weaponbulk(){
-		return 8;
+		return 50;
 	}
 
-override string gethelptext(){
-		return
-		WEPHELP_FIRE.."  Squeeze plushie\n"
-  ..WEPHELP_ALTRELOAD.."  Throw\n";
+override string,double getpickupsprite(bool usespare){
+		return "FBOLA0",1.;
 	}
-
-//these functions MUST be added to new HDWeapons
-//to support proper weapon stacking
-override bool AddSpareWeapon(actor newowner){
-  return AddSpareWeaponRegular(newowner);
-  }
-override hdweapon GetSpareWeapon(actor newowner, bool reverse, bool doselect){
-  return GetSpareWeaponRegular(newowner,reverse,doselect);
-  }
 
 override void GunBounce(){
 		double wb=weaponbulk();
@@ -54,6 +33,7 @@ override void GunBounce(){
 		}
 
 		vel*=frandom(0.7,0.8);
+/*
 		if(
 			abs(vel.x)<3
 			&&abs(vel.y)<3
@@ -65,21 +45,22 @@ override void GunBounce(){
 			bALLOWBOUNCEONACTORS=false;
 			bBOUNCEAUTOOFF=false;
 		}
-
-		A_StartSound("plush/squeak",CHAN_BODY,CHANF_OVERLAP,min(0.7,dmg*0.02));
+*/
+		A_StartSound("felonious/bolus",CHAN_BODY,CHANF_OVERLAP,min(1,dmg*0.02));
    A_AlertMonsters(1);
 		setstatelabel("spawn");
 	}
 
-action void A_CacoTaunt(){
-  A_StartSound("plush/squeak",9);
+action void A_BolusTaunt(){
+  A_StartSound("felonious/bolus",9);
   let ccp=new("DelayedTaunter");
 		ccp.target=invoker;
 		ccp.timer=18;}
 
+
 	states{
 	select0:
-		CCPF A 0{
+		FBOF A 0{
 			A_TakeInventory("NulledWeapon");
 			
 		}
@@ -92,7 +73,7 @@ action void A_CacoTaunt(){
 		wait;
 
 	deselect0:
-		CCPF A 0;
+		FBOF A 0;
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
@@ -100,21 +81,21 @@ action void A_CacoTaunt(){
 		wait;
 
 	ready:
-		CCPF A 0;
+		FBOF A 0;
 		#### A 1 A_WeaponReady(WRF_ALL);
 		goto readyend;
 
   fire:
-   CCPF A 0 A_CacoTaunt();
+   FBOF A 0 A_BolusTaunt();
 
-		CCPF BCCBA 2;
+		FBOF BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
 //specifically the PS-451 single-use plasma gun
 altreload:
   YEET:
-  CCPF A 1;
+  FBOF A 1;
 		---- A 1
 		{
 		if(player&&hdweapon(player.readyweapon)){
@@ -126,7 +107,7 @@ altreload:
   goto nope;
 
 	spawn:
-		CCPL A -1;
+		FBOL A -1;
 		stop;
 	
 	}
