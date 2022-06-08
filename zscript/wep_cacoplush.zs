@@ -81,10 +81,19 @@ action void A_CacoTaunt(){
 	select:
 		CCPF A 0;
 		goto selectcaco;
-	deselect:
-		#### A 0;
-		goto deselectcaco;
 	selectcaco:
+		---- A 0{
+			//these two don't actually work???
+			A_OverlayFlags(PSP_WEAPON,PSPF_CVARFAST|PSPF_POWDOUBLE,false);
+			A_OverlayFlags(PSP_FLASH,PSPF_CVARFAST|PSPF_POWDOUBLE,false);
+
+			A_WeaponBusy();
+			A_SetCrosshair(21);
+			A_SetHelpText();
+
+			return resolvestate("select0");
+		}
+	select0:
 		#### A 0{
 			A_TakeInventory("NulledWeapon");
 			
@@ -97,7 +106,7 @@ action void A_CacoTaunt(){
 		---- A 1 A_Raise(18);
 		wait;
 
-	deselectcaco:
+	deselect0:
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
