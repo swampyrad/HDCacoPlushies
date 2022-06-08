@@ -92,7 +92,6 @@ action void A_CacoTaunt(){
 		wait;
 
 	deselect0:
-		CCPF A 0;
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
@@ -100,21 +99,20 @@ action void A_CacoTaunt(){
 		wait;
 
 	ready:
-		CCPF A 0;
 		#### A 1 A_WeaponReady(WRF_ALL);
 		goto readyend;
 
   fire:
-   CCPF A 0 A_CacoTaunt();
+   ---- A 0 A_CacoTaunt();
 
-		CCPF BCCBA 2;
+		---- BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
 //specifically the PS-451 single-use plasma gun
 altreload:
   YEET:
-  CCPF A 1;
+  ---- A 1;
 		---- A 1
 		{
 		if(player&&hdweapon(player.readyweapon)){
@@ -122,7 +120,7 @@ altreload:
 		 DropInventory(player.readyweapon);
 		}
 		}
-		TNT1 A 0;
+		---- A 0;
   goto nope;
 
 	spawn:
