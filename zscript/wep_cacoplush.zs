@@ -107,6 +107,8 @@ action void A_CacoTaunt(){
 		---- A 1 A_Raise(18);
 		wait;
 
+	deselect:
+		#### A 0 A_StartDeselect();
 	deselect0:
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
