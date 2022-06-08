@@ -80,6 +80,10 @@ action void A_CacoTaunt(){
 	states{
 	select:
 		CCPF A 0;
+		goto selectcaco;
+	deselect:
+		#### A 0;
+		goto deselectcaco;
 	selectcaco:
 		#### A 0{
 			A_TakeInventory("NulledWeapon");
