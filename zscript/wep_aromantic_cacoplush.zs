@@ -14,7 +14,7 @@ override string,double getpickupsprite(bool usespare){
 	}
 
 	states{
-	select0:
+	select:
 		ARPF A 0;
 		goto selectcaco;
 
