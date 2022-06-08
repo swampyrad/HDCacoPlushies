@@ -59,7 +59,7 @@ action void A_BolusTaunt(){
 
 
 	states{
-	select0:
+	select:
 		FBOF A 0;
 		goto selectcaco;
 
