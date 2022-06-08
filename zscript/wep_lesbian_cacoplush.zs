@@ -16,16 +16,7 @@ override string,double getpickupsprite(bool usespare){
 	states{
 	select:
 		LCPF A 0;
-		goto select0;
-
-	ready:
-		LCPF A 0;
-		#### A 1 A_WeaponReady(WRF_ALL);
-		goto readyend;
-
-  fire:
-   LCPF A 0;
-  goto super::fire;
+		goto selectcaco;
 
 	spawn:
 		LCPL A -1;
