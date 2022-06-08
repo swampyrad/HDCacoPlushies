@@ -11,6 +11,7 @@ class CacoPlushDoll:HDWeapon{
     -BOUNCEAUTOOFF
 
    weapon.slotnumber 7;
+   obituary "%o was turned into a marketable plushie by %k."
 		weapon.slotpriority 9;
    inventory.pickupsound "plush/squeak";
 		inventory.pickupmessage "Picked up a cacodemon plushie.";
