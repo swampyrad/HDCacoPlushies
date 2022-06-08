@@ -5,7 +5,7 @@
 //-------------------------------------------------
 class TransPrideCacoPlushDoll:CacoPlushDoll{
 	default{
-		inventory.pickupmessage "Picked up a trans pridr cacodemon plushie. Trans Rights!";
+		inventory.pickupmessage "Picked up a trans pride cacodemon plushie. Trans Rights!";
 		inventory.icon "TCPLA0";
 		tag "Trans Pride Cacodemon Plushie";
 		hdweapon.refid "tcp";
