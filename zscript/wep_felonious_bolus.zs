@@ -8,6 +8,7 @@ class FeloniousBolus:CacoPlushDoll{
 	default{
 		inventory.pickupmessage "Picked up a strange bolus. It has a felonious appearance...";
    scale 1;
+   obituary "%o was sent to 10 years in prison by %k."
    bouncefactor 4;
    inventory.pickupsound "felonious/bolus";
 		inventory.icon "FBOLA0";
