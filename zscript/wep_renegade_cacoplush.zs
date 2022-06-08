@@ -19,7 +19,7 @@ override string,double getpickupsprite(bool usespare){
 	}
 
 	states{
-	select0:
+	select:
 		RCPF A 0;
 		goto selectcaco;
 
