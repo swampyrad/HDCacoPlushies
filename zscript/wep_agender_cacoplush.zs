@@ -1,5 +1,5 @@
 //-------------------------------------------------
-// *squeako*
+// a
 //-------------------------------------------------
 class AgenderPrideCacoPlushDoll:CacoPlushDoll{
 	default{
