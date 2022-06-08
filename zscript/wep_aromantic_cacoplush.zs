@@ -3,7 +3,7 @@
 //-------------------------------------------------
 class AroCacoPlushDoll:CacoPlushDoll{
 	default{
-		inventory.pickupmessage "Picked up a aromantic pride cacodemon plushie.";
+		inventory.pickupmessage "Picked up an aromantic pride cacodemon plushie.";
 		inventory.icon "ARPLA0";
 		tag "Aro Pride Cacodemon Plushie";
 		hdweapon.refid "arp";
