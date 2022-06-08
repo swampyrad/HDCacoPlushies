@@ -3,7 +3,7 @@
 //-------------------------------------------------
 class AcePrideCacoPlushDoll:CacoPlushDoll{
 	default{
-		inventory.pickupmessage "Picked up a asexual pride cacodemon plushie.";
+		inventory.pickupmessage "Picked up an asexual pride cacodemon plushie.";
 		inventory.icon "ASPLA0";
 		tag "Ace Pride Cacodemon Plushie";
 		hdweapon.refid "asp";
