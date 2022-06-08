@@ -78,8 +78,10 @@ action void A_CacoTaunt(){
 		ccp.timer=18;}
 
 	states{
-	select0:
-		CCPF A 0{
+	select:
+		CCPF A 0;
+	selectcaco:
+		#### A 0{
 			A_TakeInventory("NulledWeapon");
 			
 		}
@@ -91,7 +93,7 @@ action void A_CacoTaunt(){
 		---- A 1 A_Raise(18);
 		wait;
 
-	deselect0:
+	deselectcaco:
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
