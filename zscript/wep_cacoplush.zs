@@ -11,6 +11,7 @@ class CacoPlushDoll:HDWeapon{
     -BOUNCEAUTOOFF
 
    weapon.slotnumber 7;
+   obituary "%o was turned into a marketable plushie by %k.";
 		weapon.slotpriority 9;
    inventory.pickupsound "plush/squeak";
 		inventory.pickupmessage "Picked up a cacodemon plushie.";
@@ -78,8 +79,23 @@ action void A_CacoTaunt(){
 		ccp.timer=18;}
 
 	states{
+	select:
+		CCPF A 0;
+		goto selectcaco;
+	selectcaco:
+		---- A 0{
+			//these two don't actually work???
+			A_OverlayFlags(PSP_WEAPON,PSPF_CVARFAST|PSPF_POWDOUBLE,false);
+			A_OverlayFlags(PSP_FLASH,PSPF_CVARFAST|PSPF_POWDOUBLE,false);
+
+			A_WeaponBusy();
+			A_SetCrosshair(21);
+			A_SetHelpText();
+
+			return resolvestate("select0");
+		}
 	select0:
-		CCPF A 0{
+		#### A 0{
 			A_TakeInventory("NulledWeapon");
 			
 		}
@@ -91,8 +107,9 @@ action void A_CacoTaunt(){
 		---- A 1 A_Raise(18);
 		wait;
 
+	deselect:
+		#### A 0 A_StartDeselect();
 	deselect0:
-		CCPF A 0;
 		---- AAA 1 A_Lower();
 		---- A 1 A_Lower(18);
 		---- A 1 A_Lower(24);
@@ -100,21 +117,20 @@ action void A_CacoTaunt(){
 		wait;
 
 	ready:
-		CCPF A 0;
 		#### A 1 A_WeaponReady(WRF_ALL);
 		goto readyend;
 
   fire:
-   CCPF A 0 A_CacoTaunt();
+   #### A 0 A_CacoTaunt();
 
-		CCPF BCCBA 2;
+		#### BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
 //specifically the PS-451 single-use plasma gun
 altreload:
   YEET:
-  CCPF A 1;
+  ---- A 1;
 		---- A 1
 		{
 		if(player&&hdweapon(player.readyweapon)){
@@ -122,7 +138,7 @@ altreload:
 		 DropInventory(player.readyweapon);
 		}
 		}
-		TNT1 A 0;
+		---- A 0;
   goto nope;
 
 	spawn:
