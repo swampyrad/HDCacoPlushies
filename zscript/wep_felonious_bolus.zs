@@ -65,9 +65,9 @@ action void A_BolusTaunt(){
 		goto selectcaco;
 
   fire:
-   ---- A 0 A_BolusTaunt();
+   #### A 0 A_BolusTaunt();
 
-		---- BCCBA 2;
+		#### BCCBA 2;
   goto nope;
 
 	spawn:
