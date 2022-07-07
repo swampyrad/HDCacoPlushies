@@ -121,9 +121,9 @@ action void A_CacoTaunt(){
 		goto readyend;
 
   fire:
-   ---- A 0 A_CacoTaunt();
+   #### A 0 A_CacoTaunt();
 
-		---- BCCBA 2;
+		#### BCCBA 2;
   goto nope;
 
 //throw code borrowed from Potetobloke Weapons Pack,
